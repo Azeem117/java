@@ -5,7 +5,7 @@ public class driver {
         System.out.println(myCar.tellFuel());
         //myCar.defineCar();
         Cars swift = new Cars();
-        swift.getFuel(6);
+        swift.getFuel(7);
         swift.start();
         swift.drive();
     }
