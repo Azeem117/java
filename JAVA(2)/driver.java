@@ -8,6 +8,8 @@ public class driver {
         swift.getFuel(7);
         swift.start();
         swift.drive();
+        // swift.start().drive();
+
     }
     
 }
