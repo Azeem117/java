@@ -15,6 +15,7 @@ public class simpleAndCompoundinterst {
         si = (p*r*t)/100;
         ci = p*Math.pow(1+(r/100),t);
         System.out.print("Simple interst : "+si+"\ncompound intrest is : "+ci);
+        //hello
     }
     
 }
