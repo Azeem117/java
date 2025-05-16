@@ -4,7 +4,7 @@ public class driver {
     static int minAge;
     int age;
     public boolean isAllowedToDrive(){
-        return this.age>minAge;
+        return this.age>=minAge;
     }
     public static void main(String[] args) {
         Cars myCar = new Cars();
