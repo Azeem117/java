@@ -28,10 +28,12 @@ public class Cars {
         else if(fuel<5){
             System.out.println("Car is in Reserved mode ");
             fuel--;
+            drive();
         }
         else {
             System.out.println("Car is starting......bruhhhh...... ");
             fuel--;
+            drive();
         }
     }
     public void drive(){
