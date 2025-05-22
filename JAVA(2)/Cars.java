@@ -21,20 +21,39 @@ public class Cars {
         System.out.print("Enter no of wheels : ");
         
     }
-    public void start(){
+    //part one of understanding
+    // public void start(){
+    //     if(fuel ==0){
+    //         System.out.println("Car is out of fuel");
+    //     }
+    //     else if(fuel<5){
+    //         System.out.println("Car is in Reserved mode ");
+    //         fuel--;
+    //         //drive();
+    //     }
+    //     else {
+    //         System.out.println("Car is starting......bruhhhh...... ");
+    //         fuel--;
+    //         //drive();
+    //     }
+    // }
+    
+    // part 2nd
+    public Cars start(){
         if(fuel ==0){
             System.out.println("Car is out of fuel");
         }
         else if(fuel<5){
             System.out.println("Car is in Reserved mode ");
             fuel--;
-            drive();
+            //drive();
         }
         else {
             System.out.println("Car is starting......bruhhhh...... ");
             fuel--;
-            drive();
+            //drive();
         }
+        return this;
     }
     public void drive(){
         // fuel =10;
