@@ -7,6 +7,15 @@ public class Cars {
     String name; 
     int noOfSeats;
     float fuel;
+    //parametrized constructor
+    public Cars(String colour,int noOfWheels) {
+        this.colour = colour;
+        
+
+    }
+    public Cars(){
+         colour = "BLACK";
+     }
     public void defineCar(){
         
         Scanner sc = new Scanner(System.in);
