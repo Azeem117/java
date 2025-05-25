@@ -4,9 +4,16 @@ import java.util.Scanner;
 public class Book {
     String Title;
     String Author;
-    int isbn;
+    String isbn;
     static int totalBook;
+    boolean isBorrowed;
     String nameOfBorrower;
+    Static {
+        totalBook = 0;
+    }
+    
+    
+
     public void borrowBook(String name ){
         Scanner s = new Scanner(System.in);
         this.nameOfBorrower = name;
