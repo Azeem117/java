@@ -11,8 +11,19 @@ public class Book {
     Static {
         totalBook = 0;
     }
-    
-    
+    Book(String isbn,String Title,String Author){
+        this.isbn = isbn;
+        this.Title = Title;
+        this.Author = Author;
+
+    }
+    {
+        totalBook++;
+    }
+    Book(String isbn){
+        this(isbn,"unknown","unknown");
+    }
+
 
     public void borrowBook(String name ){
         Scanner s = new Scanner(System.in);
