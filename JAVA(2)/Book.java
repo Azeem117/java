@@ -49,10 +49,12 @@ public class Book {
     //     System.out.print("isbn of the following book is "+isbn);
     // }
     public static void main(String[] args) {
-        Book java = new Book("1","KG CODING","Prashat sir");
+        Book java = new Book("1","Java","Prashat sir");
         Book clang = new Book("2");
         System.out.println(getTotalBooks());
         java.borrowBook();
+        System.out.println("Enjoy "+java.Title);
+        
         clang.borrowBook();
         java.borrowBook();
         clang.returnBook();
