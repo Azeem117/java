@@ -1,5 +1,4 @@
 
-import java.util.Scanner;
 
 public class Book {
     String Title;
@@ -8,9 +7,9 @@ public class Book {
     static int totalBook;
     boolean isBorrowed;
     String nameOfBorrower;
-    Static {
-        totalBook = 0;
-    }
+    // {
+    //     totalBook = 0;
+    // }
     Book(String isbn,String Title,String Author){
         this.isbn = isbn;
         this.Title = Title;
@@ -25,32 +24,38 @@ public class Book {
     }
 
 
-    public void borrowBook(String name ){
-        Scanner s = new Scanner(System.in);
-        this.nameOfBorrower = name;
-        int n;
-        System.out.print("Enter Number of books to be borrowed : ");
-        n = s.nextInt();
-        System.out.print("Book Have Been Given");
-        totalBook -= n;
-
+    void borrowBook(){
+        if(isBorrowed){
+            System.out.println("Book Is Already borrowed");
+        }else{
+            this.isBorrowed =true;
+            System.out.println("Enjoy the book");
+        }
     }
-    public void returnBook(int noOfBookToReturn){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Number of books to be returned : " );
-        noOfBookToReturn = sc.nextInt();
-        totalBook += noOfBookToReturn;
-        System.out.print("Books Have Been Returned");
+    
+    void returnBook(){
+        if(isBorrowed){
+            this.isBorrowed = false;
+            System.out.println("Book is returned\nHope you enjoyed it");
+        }else{
+            System.out.println("This book is Already in library");
+        }
     }
-    public static void getTotalBooks(){
-        System.out.print("Total Number of Books In Library are : "+totalBook);
+    public static int getTotalBooks(){
+        return totalBook;
 
     }
     // public void searchBook(String Title,String Author){
     //     System.out.print("isbn of the following book is "+isbn);
     // }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
+        Book java = new Book("1","KG CODING","Prashat sir");
+        Book clang = new Book("2");
+        System.out.println(getTotalBooks());
+        java.borrowBook();
+        clang.borrowBook();
+        java.borrowBook();
+        clang.returnBook();
+        clang.returnBook();
     }
 }
